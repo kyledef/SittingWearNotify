@@ -39,6 +39,7 @@ public class ActivityRecognitionIntentService extends IntentService {
         Log.d(TAG, "previous: " + getActivityName(previousActivity) + " current: " + getActivityName(currActivity));
     }
 
+
     private String getActivityName(int activity){
         switch (activity){
             case DetectedActivity.IN_VEHICLE:
@@ -48,7 +49,7 @@ public class ActivityRecognitionIntentService extends IntentService {
             case DetectedActivity.ON_FOOT:
                 return "standing";
             case DetectedActivity.STILL:
-                return "riding";
+                return "sitting";
             case DetectedActivity.WALKING:
                 return "walking";
             case DetectedActivity.RUNNING:
