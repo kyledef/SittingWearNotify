@@ -18,7 +18,7 @@ import org.kyledef.sittingwearnotify.service.ActivityRecognitionIntentService;
 public class ActivityApiUtil implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
     public static final int REQUEST_CODE = 256;
-    public static final int REQUEST_INTERVAL = 500;
+    public static final int REQUEST_INTERVAL = 60000; // 1000ms * 60
     public static final String TAG = "ActivityApiUtil";
 
     private static ActivityApiUtil instance;

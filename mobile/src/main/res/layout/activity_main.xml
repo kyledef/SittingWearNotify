@@ -6,11 +6,35 @@
     android:layout_height="match_parent"
     tools:context="org.kyledef.sittingwearnotify.ui.Main">
 
-
-    <FrameLayout android:id="@+id/container"
+    <LinearLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_activity_display"
+            android:id="@+id/activity_status"
+            android:layout_gravity="center_horizontal"
+            android:textIsSelectable="true"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:id="@+id/activity_status_image"
+                android:src="@drawable/question_mark"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
 
     <fragment android:id="@+id/navigation_drawer"
         android:layout_width="@dimen/navigation_drawer_width"
